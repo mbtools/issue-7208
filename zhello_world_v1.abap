@@ -7,7 +7,8 @@ ENDCLASS.
 
 CLASS zcl_hello_world IMPLEMENTATION.
   METHOD say_hello.
-    cl_demo_output=>display( 'Hello, World!' ).
+    DATA(lv_name) = 'ABAP Developer'.
+    cl_demo_output=>display( |Hello, { lv_name }!| ).
   ENDMETHOD.
 ENDCLASS.
 
